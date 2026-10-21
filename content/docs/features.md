@@ -19,7 +19,7 @@ lead = "A tour of what an instance does, area by area."
 
 - **One account per person.** Handles (website, GitHub, Discord, Mastodon, Bluesky, LinkedIn, Instagram, X) and pronouns belong to the account, and every form reads from them.
 - **Volunteers.** An application form, a review, and a volunteer hub with tasks that can be assigned to a person or a team.
-- **Teams and permissions.** Each team grants permissions from a catalogue, with presets such as Organizers, Program, Sponsorship and Proposal reviewers. Who leads a team, and who may grant permissions, is itself a permission. The settings organisers need left the Django admin.
+- **Teams and permissions.** Each team grants permissions from a catalogue, with presets such as Organizers, Program, Sponsorship and Proposal reviewers. Naming a team's leads, and changing what a team grants, are themselves gated by permissions. The settings organisers need left the Django admin.
 
 ## Sponsors
 
@@ -58,7 +58,7 @@ lead = "A tour of what an instance does, area by area."
 ## Nothing loads from anywhere else
 
 - Every page is served by the instance itself: the fonts, the icons, the charts and every script.
-- No analytics, no advertising, no third-party cookies. The only third-party services are the ones an instance needs on the server side: its database, its bucket and its mail provider.
+- No analytics, no advertising, no third-party cookies. The third-party services an instance talks to are on the server side: its bucket and its mail provider, plus Pretix and Sentry when you configure them.
 
 ## Documentation per release
 

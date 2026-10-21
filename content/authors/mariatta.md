@@ -11,4 +11,4 @@ website = "https://mariatta.ca"
   url = "https://github.com/Mariatta"
 +++
 
-Mariatta makes Flashlights and runs the first two instances of it.
+Mariatta makes Flashlights and is setting up its first two instances.

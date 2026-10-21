@@ -1,0 +1,7 @@
+# The theme calls the people section "organizers"; on this site they are
+# the maintainers. Only the strings that show on the page are overridden.
+[eyebrowOrganizer]
+other = "Maintainer"
+
+[allOrganizers]
+other = "All maintainers"

@@ -5,6 +5,7 @@ title = "Home"
   eyebrow = "Free software for the people who run events"
   title = "The back of house for your event, in one place"
   lead = "Flashlights runs the parts of an event nobody in the audience sees: the call for proposals, speakers and their files, volunteers and teams, sponsors, the schedule, and the emails that hold it all together. One instance serves one community, edition after edition."
+  image = "images/lights.svg"
   [[hero.ctas]]
     label = "Try it on your machine"
     url = "/docs/try-it/"

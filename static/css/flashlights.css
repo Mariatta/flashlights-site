@@ -1,18 +1,41 @@
-/* Flashlights on top of Popular: the primary button is Beam with Night
-   ink, as in the core's design system, while accent-coloured text keeps
-   the Beam ink shade the brand block sets as the theme's primary. */
-.g-btn--primary {
-  background: #ffd43b;
-  border-color: #ffd43b;
-  color: #0f0f0d;
-}
-.g-btn--primary:hover {
-  background: #ffe27a;
-  border-color: #ffe27a;
-  color: #0f0f0d;
-}
+/* Flashlights on top of Popular. The brand block in hugo.toml sets the
+   palette and the fonts; this file carries what the block cannot say:
+   the primary button is Beam with Night ink, as in the core's design
+   system, and the landing hero is the app's own: Night, the beam glow
+   and the ten lights. Accent-coloured text keeps the Beam ink shade. */
+
+.g-btn--primary,
+.g-btn--primary:hover,
 .g-btn--primary:active {
-  background: #f2bd00;
-  border-color: #f2bd00;
   color: #0f0f0d;
 }
+.g-btn--primary { background: #ffd43b; border-color: #ffd43b; }
+.g-btn--primary:hover { background: #ffe27a; border-color: #ffe27a; box-shadow: 0 10px 28px rgba(255, 212, 59, 0.25); }
+.g-btn--primary:active { background: #f2bd00; border-color: #f2bd00; }
+
+/* The landing hero: the app's landing-hero rules, token for token. */
+.g-hero {
+  background:
+    radial-gradient(60% 80% at 50% 0%, rgba(255, 212, 59, 0.22), rgba(255, 212, 59, 0) 70%),
+    #0f0f0d;
+}
+.g-hero h1 { color: #f7f5ef; letter-spacing: -0.02em; text-wrap: balance; }
+.g-hero__lead { color: #e2dfd5; }
+.g-hero .g-eyebrow { color: #ffd43b; }
+.g-hero .g-btn--outline { color: #f7f5ef; border-color: #c6c2b6; }
+.g-hero .g-btn--outline:hover { background: #f7f5ef; color: #0f0f0d; border-color: #f7f5ef; }
+.g-hero .g-btn--ghost { color: #e2dfd5; }
+.g-hero .g-btn--ghost:hover { background: rgba(255, 212, 59, 0.12); color: #f7f5ef; }
+
+/* The lights sit on the Night, not in a framed card. */
+.g-hero__media {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  overflow: visible;
+}
+.g-hero__media img { aspect-ratio: 3 / 2; object-fit: contain; }
+
+/* Stat numbers on Paper use the accent's ink shade, never Beam itself. */
+.g-stat__n { color: #7a5c00; }

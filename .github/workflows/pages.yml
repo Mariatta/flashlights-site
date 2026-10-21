@@ -1,5 +1,7 @@
 # Builds the site with Hugo and publishes it to GitHub Pages on every push
-# to main. The custom domain is static/CNAME.
+# to main. The custom domain (flashlights.app) is set in the repository's
+# Pages settings, with the DNS records for the apex; static/CNAME only
+# records it, since a Pages workflow does not read the file.
 name: Pages
 
 on:

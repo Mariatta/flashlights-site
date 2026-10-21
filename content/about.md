@@ -14,7 +14,7 @@ Each community runs its own instance, and each year's event, or each series of d
 
 ## The name
 
-The name is a nod to the Darren Hayes song. *Tiny Little Flashlights* is the full title: the small lights that, together, make a show possible. The accent colour is called Beam.
+The name is a nod to the Darren Hayes song; *Tiny Little Flashlights* is the full title. The accent colour is called Beam.
 
 ## Licence and contributions
 

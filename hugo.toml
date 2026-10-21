@@ -50,16 +50,18 @@ timeZone = "America/Vancouver"
   description = "Flashlights is the back-of-house platform for events, summits and meetups: the call for proposals, speakers and their files, volunteers and teams, sponsors, the schedule and the emails that hold it together. Free software, one instance per community."
   brandName = "Flashlights"
   brandSub = "back of house for events"
-  logo = "images/logo.svg"
+  logo = "images/favicon.svg"
   favicon = "images/favicon.svg"
-  ogImage = "images/logo.svg"
+  ogImage = "images/share.png"
   customCSS = ["css/fonts.css", "css/flashlights.css"]
 
   # The core's design system: Beam on Night and Paper, Bricolage Grotesque
   # for display, Atkinson Hyperlegible Next for text. The theme has one
   # primary colour for fills and for text, so the primary is Beam's ink
-  # shade (Beam 700), which reads on white; css/flashlights.css puts Beam
-  # itself, with Night ink, on the primary button. The fonts are served
+  # shade (Beam 700), which reads on Paper; css/flashlights.css puts Beam
+  # itself, with Night ink, on the primary button, and makes the landing
+  # hero the app's: Night with the beam glow and the ten lights. The
+  # interior page bands keep the Beam wash. The fonts are served
   # from static/fonts/ (css/fonts.css), copied from the core with their
   # licences.
   [params.brand]
@@ -71,6 +73,10 @@ timeZone = "America/Vancouver"
     ink           = "#0f0f0d"
     surfaceWash   = "#fff0b3"
     surfaceInk    = "#0f0f0d"
+    surfacePage   = "#f7f5ef"
+    textBody      = "#171714"
+    textMuted     = "#706c62"
+    borderSubtle  = "#e2dfd5"
     fontSans      = "'Atkinson Hyperlegible Next', Inter, system-ui, sans-serif"
     fontDisplay   = "'Bricolage Grotesque', Inter, sans-serif"
 
@@ -127,6 +133,7 @@ timeZone = "America/Vancouver"
         label = "About and licence"
         url = "/about/"
 
-# No events section on this site, so no calendar feed: pages, RSS and llms.txt.
+# No events section on this site, so no calendar feed and, until the theme's
+# llms.txt handles a site without events, no llms.txt either.
 [outputs]
-  home = ["HTML", "RSS", "LLMS"]
+  home = ["HTML", "RSS"]

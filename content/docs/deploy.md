@@ -33,7 +33,7 @@ The [deployment guide](https://docs.flashlights.app/latest/developer/deployment/
 
 - **Heroku and compatible hosts** (Dokku, Render through its import, and others): `app.json` and `heroku.yml` describe the instance, add-ons included, and a Deploy button creates it.
 - **Azure Container Apps**: a Bicep template provisions Postgres, Redis and the container apps from an image tag.
-- **Cabotage**: the platform the Python Software Foundation runs.
+- **Cabotage**: the platform the portal this project is derived from runs on.
 - **A plain server**: Docker Compose, with your own Postgres and Redis or the containers in the file.
 
 ## Your name on it

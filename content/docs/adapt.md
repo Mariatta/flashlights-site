@@ -14,8 +14,9 @@ Most of what makes an instance yours is environment variables, read at boot:
 - **Colour**: `BRAND_PRESET`, one of `beam`, `teal`, `copper`, `indigo` or `raspberry`, or `BRAND_PRIMARY` with your own `#rrggbb`. The ink on it, its text shade and the hover and press shades are derived.
 - **Links**: `DOCS_URL` for your community's own documentation, `TERMS_URL` for your terms of service. The code of conduct, the sponsorship prospectus and the schedule link belong to the edition and are set in the portal.
 - **Switches**: `VOLUNTEERING_ENABLED`, `SPONSORSHIP_ENABLED` and `STATS_PUBLIC`. Off, the area's pages are gone and its navigation with them.
+- **Contacts**: `SPONSORSHIP_EMAIL` and `ACCOUNTING_EMAIL`, who receives a sponsorship contract request.
 
-Everything else organisers need is set inside the portal: editions, venues and rooms, teams and their permissions, checklist templates, email addresses for sponsorship contracts. The [adapting guide](https://docs.flashlights.app/latest/user/adapting/) in the core documentation goes through what you can change without code.
+Everything else organisers need is set inside the portal: editions, venues and rooms, teams and their permissions, checklist templates, the code of conduct and prospectus links. The [adapting guide](https://docs.flashlights.app/latest/user/adapting/) in the core documentation goes through what you can change without code.
 
 ## Add your own code
 
