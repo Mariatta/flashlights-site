@@ -1,7 +1,7 @@
 +++
 title = "About Flashlights"
 eyebrow = "About"
-lead = "The story, the approach, where it is going, the name, the licence, and who keeps the lights on."
+lead = "The story, the approach, the name, the licence, and who keeps the lights on."
 +++
 
 **Flashlights** is the organisers' portal for events, summits and meetups. It runs the parts of an event nobody in the audience sees: a lightweight speaker intake, the speakers and their files, volunteers and teams, sponsors, the schedule, and the emails that hold it all together.
@@ -18,15 +18,9 @@ The same line is drawn for running it. Flashlights is software to self-host, one
 
 Each community runs its own instance, and each year's event, or each series of dates, is an edition inside it. What the instance is called, its colours, its links and which features it runs are configuration, so the same software serves a three-day online conference and a monthly meetup. A community that needs more than configuration adds its own code to the image without forking the core.
 
-## Where it is going
+## Still being built
 
-Flashlights is a working tool for the communities its maintainer runs, and it grows from what they need next. There is no timeline and no promised order. This is what is missing and will be worked on.
-
-- **Integrations instead of imports.** Attendee records arrive by CSV export or from Pretix today, and a session accepted in another call for proposals arrives by hand, through an invitation. The intent is connectors to the common ticketing and call for proposals tools, so an instance keeps itself current and nobody imports anything.
-- **Money.** A ledger of the event's income and spending, bookkeeping an organiser can hand to a treasurer, and financial transparency for members: what came in and what it paid for.
-- **Community grants.** A request system for the grants a community gives out, from application to decision to payment, kept with the money it comes from.
-- **An internal mode.** Events whose program is not public, such as a sprint or a members' meeting: people with an account see the schedule according to what they hold, and nothing is published.
-- **An attendee mode.** Attendees have nothing to sign in to today. For events that want it, a side of the portal for attendees: their own schedule, their details, and what the organisers need from them.
+Flashlights is in active development. A community needs more than speaker and sponsor management, and the rest comes step by step, as the communities that run it need it.
 
 ## The name
 

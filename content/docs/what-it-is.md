@@ -35,7 +35,7 @@ The [features page](/docs/features/) goes through each area.
 - **Your public website.** Flashlights is the private side. A public program widget and API let your website show the schedule; the rest of the website is yours. [Popular](https://popular.mariatta.ca), a theme for community sites, is built by the same person and is the natural front of house.
 - **Video calls and chat.** The edition records where its community chat lives and whether talks are recorded; the calls and the chat happen on the platforms you already use.
 
-The hand-offs are manual for now. The about page says [where Flashlights is going](/about/#where-it-is-going).
+The hand-offs are manual for now. Flashlights is [still being built](/about/#still-being-built), step by step.
 
 ## Where it comes from
 
