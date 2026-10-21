@@ -4,7 +4,7 @@ eyebrow = "About"
 lead = "The story, the name, the licence, and who keeps the lights on."
 +++
 
-**Flashlights** is the organisers' portal for events, summits and meetups. It runs the parts of an event nobody in the audience sees: session proposals, speakers and their files, volunteers and teams, sponsors, the schedule, and the emails that hold it all together.
+**Flashlights** is the organisers' portal for events, summits and meetups. It runs the parts of an event nobody in the audience sees: a lightweight speaker intake, the speakers and their files, volunteers and teams, sponsors, the schedule, and the emails that hold it all together.
 
 It was not designed in the abstract. It is derived from the [PyLadiesCon portal](https://github.com/pyladies/pyladiescon-portal), the software built to run PyLadiesCon, a volunteer-run online conference, and it keeps pulling improvements from it. That portal was built for one highly specific purpose, and it is good at it. Its author also organises communities that are nothing like PyLadiesCon, a one-day summit inside a large conference and a monthly meetup chapter among them, and they turned out to need most of the same things: somewhere for speakers to send their files, a team with the right access, sponsors kept track of, a schedule, and the emails. Flashlights is that portal made to serve any of them.
 

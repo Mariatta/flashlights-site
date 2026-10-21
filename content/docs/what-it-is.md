@@ -18,7 +18,7 @@ Flashlights does not care which of these you are. One instance serves one commun
 
 ## What it runs
 
-- **Program**: proposals, approved or declined one by one, invitations, speaker profiles, sessions, checklists on both sides, the schedule, recordings and uploads, and a public program widget and API.
+- **Program**: a lightweight speaker intake, invitations, speaker profiles, sessions, checklists on both sides, the schedule, recordings and uploads, and a public program widget and API.
 - **People**: volunteer applications, teams, permissions granted through teams, and one account per person whose handles and pronouns flow into every form.
 - **Sponsors**: tiers, contract requests, donations and stats, kept by the organisers.
 - **The numbers**: an organiser dashboard and stats pages, fed by the portal's own records and by attendee records read from Pretix or a CSV export.
@@ -28,7 +28,7 @@ The [features page](/docs/features/) goes through each area.
 
 ## What it leaves to other tools
 
-- **Running a call for proposals.** Flashlights takes session proposals through a simple queue, approved or declined one by one. A large review with scoring and reviewer assignment belongs to Pretalx or Sessionize; the accepted speakers are invited here.
+- **Running a call for proposals.** Flashlights has a lightweight speaker intake: people propose a session and you say yes or no, or you invite the speakers you have already chosen. A large review with scoring and reviewer assignment belongs to a tool built for it; the speakers it picks are invited here.
 - **Selling tickets.** Flashlights reads who registered from your ticketing or RSVP tool; it is not a ticket shop.
 - **Your public website.** Flashlights is the private side. A public program widget and API let your website show the schedule; the rest of the website is yours. [Popular](https://popular.mariatta.ca), a theme for community sites, is built by the same person and is the natural front of house.
 - **Video calls and chat.** The edition records where its community chat lives and whether talks are recorded; the calls and the chat happen on the platforms you already use.

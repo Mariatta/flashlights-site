@@ -4,7 +4,7 @@ title = "Home"
 [hero]
   eyebrow = "Free software for the people who run events"
   title = "The organisers' side of your event, in one place"
-  lead = "Flashlights runs the parts of an event nobody in the audience sees: session proposals, speakers and their files, volunteers and teams, sponsors, the schedule, and the emails that hold it all together. One instance serves one community, edition after edition."
+  lead = "Flashlights runs the parts of an event nobody in the audience sees: a lightweight speaker intake, the speakers and their files, volunteers and teams, sponsors, the schedule, and the emails that hold it all together. One instance serves one community, edition after edition."
   image = "images/lights.svg"
   [[hero.ctas]]
     label = "Try it on your machine"
@@ -41,8 +41,8 @@ title = "Home"
 
 [[features]]
   icon = "fa-solid fa-microphone-lines"
-  title = "Session proposals and speakers"
-  body = "A simple proposal queue, invitations, speaker profiles, sessions, and two-sided checklists with reminders, so a speaker always knows what you still need from them. Not a call for proposals system: an event that reviews in Pretalx or Sessionize invites its accepted speakers here."
+  title = "Speaker intake and checklists"
+  body = "A lightweight speaker intake: people propose a session and you say yes or no, or you invite the speakers you have already chosen. Then profiles, sessions and two-sided checklists with reminders, so a speaker always knows what you still need from them. Not a call for proposals system."
 [[features]]
   icon = "fa-solid fa-calendar-days"
   title = "The schedule"

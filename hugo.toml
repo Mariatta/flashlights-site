@@ -47,7 +47,7 @@ timeZone = "America/Vancouver"
 
 [params]
   tagline = "Tiny Little Flashlights"
-  description = "Flashlights is the organisers' portal for events, summits and meetups: session proposals, speakers and their files, volunteers and teams, sponsors, the schedule and the emails that hold it together. Free software, one instance per community."
+  description = "Flashlights is the organisers' portal for events, summits and meetups: a lightweight speaker intake, the speakers and their files, volunteers and teams, sponsors, the schedule and the emails that hold it together. Free software, one instance per community."
   brandName = "Flashlights"
   brandSub = "the organisers' portal for events"
   logo = "images/favicon.svg"

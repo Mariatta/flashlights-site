@@ -8,7 +8,7 @@ lead = "A tour of what an instance does, area by area."
 
 ## Program
 
-- **Session proposals.** People propose sessions from their own account; the organisers' queue shows each proposal's state, and a proposed session is approved or declined from its own page. A turned-down proposal can still be approved later. This is an intake, not a call for proposals system: there is no scoring and no reviewer assignment. An event that reviews in Pretalx or Sessionize invites its accepted speakers here.
+- **Speaker intake.** A lightweight one: people propose a session from their own account, the organisers' queue shows each proposal's state, and a proposed session is approved or declined from its own page. A turned-down proposal can still be approved later. It is not a call for proposals system: there is no scoring and no reviewer assignment. An event that reviews elsewhere invites the speakers it has chosen.
 - **Invitations.** Invite a speaker by email; accepting the invitation creates their account. A returning volunteer already has one.
 - **Speaker profiles and sessions.** Each presenter has a profile, each session its presenters, and a person speaking twice is one person.
 - **Checklists on both sides.** The organisers see what each speaker still owes; the speaker sees the same list from their side, with due dates that follow the talk, and reminders that go out on time.
