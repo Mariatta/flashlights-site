@@ -29,7 +29,7 @@ make manage set_site_domain localhost:8000
 make seed
 ```
 
-`make seed` runs `seed_dev_data`: an active edition and a past in-person one, volunteers on teams, speakers at every stage of their checklist, proposals in each state, sponsors and affiliations. It prints the logins when it finishes. The accounts it lists (organisers, volunteers, one speaker and a sponsor contact) use the password `password123`; the other speakers sign in with a code, which arrives in the local mail viewer at <http://localhost:1080/>.
+`make seed` runs `seed_dev_data`: an active edition and a past in-person one, volunteers on teams, speakers at every stage of their checklist, proposals in each state, sponsors and affiliations. It prints the logins when it finishes. The accounts it lists (organisers, volunteers, one speaker and one sponsor contact, an account a sponsor may have but does not need) use the password `password123`; the other speakers sign in with a code, which arrives in the local mail viewer at <http://localhost:1080/>.
 
 Sign in as an organiser and open **Organize**. Then sign in as a speaker and see the same event from their side.
 

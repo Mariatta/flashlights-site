@@ -8,17 +8,17 @@ lead = "A tour of what an instance does, area by area."
 
 ## Program
 
-- **Call for proposals.** People propose sessions from their own account; the organisers' queue shows each proposal's state, and a proposed session can be answered from its own page. A turned-down proposal can still be approved later.
+- **Session proposals.** People propose sessions from their own account; the organisers' queue shows each proposal's state, and a proposed session is approved or declined from its own page. A turned-down proposal can still be approved later. This is an intake, not a call for proposals system: there is no scoring and no reviewer assignment. An event that reviews in Pretalx or Sessionize invites its accepted speakers here.
 - **Invitations.** Invite a speaker by email; accepting the invitation creates their account. A returning volunteer already has one.
 - **Speaker profiles and sessions.** Each presenter has a profile, each session its presenters, and a person speaking twice is one person.
 - **Checklists on both sides.** The organisers see what each speaker still owes; the speaker sees the same list from their side, with due dates that follow the talk, and reminders that go out on time.
 - **The schedule.** Rooms, slots and sessions, built in an editor and published through a program widget any website can embed and a read-only API.
-- **Recordings and uploads.** Videos, slides and other files are kept in your bucket, next to the session, with a length check on uploaded video.
+- **Recordings and uploads.** Videos, slides and other files are kept in a private bucket of yours, next to the session, with a length check on uploaded video.
 
 ## People
 
 - **One account per person.** Handles (website, GitHub, Discord, Mastodon, Bluesky, LinkedIn, Instagram, X) and pronouns belong to the account, and every form reads from them.
-- **Volunteers.** An application form, a review, and a volunteer hub with tasks that can be assigned to a person or a team.
+- **Volunteers.** An application form, a review, and a volunteer hub where speaker checklist items can be assigned to a person or a team.
 - **Teams and permissions.** Each team grants permissions from a catalogue, with presets such as Organizers, Program, Sponsorship and Proposal reviewers. Naming a team's leads, and changing what a team grants, are themselves gated by permissions. The settings organisers need left the Django admin.
 
 ## Sponsors
@@ -27,10 +27,10 @@ lead = "A tour of what an instance does, area by area."
 - Sponsors never need an account; the organisers keep their record.
 - Switch the whole area off for an event that has none, and its pages are gone.
 
-## Tickets
+## Registrations
 
-- Attendee numbers from a Pretix shop or a CSV import, so the stats know how many people are coming.
-- Flashlights is not a ticket shop and does not try to be one.
+- Who has registered, from a Pretix shop through its API or a CSV export of whatever sells your tickets or takes your RSVPs, so the stats know how many people are coming and, when the country is mapped, where from.
+- Flashlights sells no tickets and does not try to.
 
 ## Editions
 
@@ -46,7 +46,7 @@ lead = "A tour of what an instance does, area by area."
 
 ## Runs anywhere
 
-- Four services: Postgres, Redis, an S3-compatible bucket from any provider, and SMTP from any provider.
+- Four services: Postgres, Redis, an S3-compatible bucket from any provider (a second, private one when speakers upload files), and SMTP from any provider.
 - A boot contract with three processes, `web`, `worker` and `release`, and a production boot that fails at once, naming every missing variable.
 - Documented on Heroku and compatible hosts, Azure Container Apps, Cabotage and a plain server. See [Deploy](/docs/deploy/).
 
@@ -55,9 +55,9 @@ lead = "A tour of what an instance does, area by area."
 - A community adds its own Django app to the image, and the app may replace a core template or static file.
 - Upgrades are a change of image tag, not a merge. See [Make it yours](/docs/adapt/).
 
-## Nothing loads from anywhere else
+## No third-party code on any page
 
-- Every page is served by the instance itself: the fonts, the icons, the charts and every script.
+- Every script, stylesheet, font, icon and chart is served by the instance itself. The only other host a page touches is your own bucket, for the pictures and files people upload.
 - No analytics, no advertising, no third-party cookies. The third-party services an instance talks to are on the server side: its bucket and its mail provider, plus Pretix and Sentry when you configure them.
 
 ## Documentation per release

@@ -10,7 +10,7 @@ An instance is one image, four services and a set of environment variables. Noth
 
 ## The image
 
-Each release publishes `ghcr.io/mariatta/flashlights:X.Y.Z`, a slim image for `amd64` and `arm64`, and `X.Y.Z-full`, which adds machine transcription for uploaded video. `X.Y` and `latest` follow the newest release. Pin a version in production and upgrade on purpose: until 1.0, read the [changelog](/changelog/) entry before you do.
+Each release publishes `ghcr.io/mariatta/flashlights:X.Y.Z`, a slim image for `amd64` and `arm64`, and `X.Y.Z-full`, `amd64` only, which carries the local transcription engine; transcription is then switched on in the environment and per edition. `X.Y` and `latest` follow the newest release. Pin a version in production and upgrade on purpose: until 1.0, read the [changelog](/changelog/) entry before you do.
 
 ## Four services
 
@@ -18,7 +18,7 @@ Each release publishes `ghcr.io/mariatta/flashlights:X.Y.Z`, a slim image for `a
 |---|---|---|
 | Postgres | yes, 15 or newer | the database |
 | Redis | yes | the queue the worker reads |
-| An S3-compatible bucket | yes | speaker uploads; Cloudflare R2, Backblaze B2, DigitalOcean Spaces, MinIO and AWS all work |
+| An S3-compatible bucket | yes | uploads (headshots, logos); speaker files need a second, private bucket at the same provider; Cloudflare R2, Backblaze B2, DigitalOcean Spaces, MinIO and AWS all work |
 | SMTP | yes | every email the portal sends |
 
 ## The boot contract

@@ -3,8 +3,8 @@ title = "Home"
 
 [hero]
   eyebrow = "Free software for the people who run events"
-  title = "The back of house for your event, in one place"
-  lead = "Flashlights runs the parts of an event nobody in the audience sees: the call for proposals, speakers and their files, volunteers and teams, sponsors, the schedule, and the emails that hold it all together. One instance serves one community, edition after edition."
+  title = "The organisers' side of your event, in one place"
+  lead = "Flashlights runs the parts of an event nobody in the audience sees: session proposals, speakers and their files, volunteers and teams, sponsors, the schedule, and the emails that hold it all together. One instance serves one community, edition after edition."
   image = "images/lights.svg"
   [[hero.ctas]]
     label = "Try it on your machine"
@@ -29,7 +29,7 @@ title = "Home"
   label = "services to run it: Postgres, Redis, a bucket, SMTP"
 [[stats]]
   value = "0"
-  label = "third-party requests from any page"
+  label = "third-party scripts, fonts, trackers or cookies"
 [[stats]]
   value = "AGPL"
   label = "free software, with a permission for your own events"
@@ -41,8 +41,8 @@ title = "Home"
 
 [[features]]
   icon = "fa-solid fa-microphone-lines"
-  title = "Call for proposals and speakers"
-  body = "Proposals with a review queue, invitations, speaker profiles, sessions, and two-sided checklists with reminders, so a speaker always knows what you still need from them."
+  title = "Session proposals and speakers"
+  body = "A simple proposal queue, invitations, speaker profiles, sessions, and two-sided checklists with reminders, so a speaker always knows what you still need from them. Not a call for proposals system: an event that reviews in Pretalx or Sessionize invites its accepted speakers here."
 [[features]]
   icon = "fa-solid fa-calendar-days"
   title = "The schedule"
@@ -56,9 +56,9 @@ title = "Home"
   title = "Sponsors"
   body = "Tiers, contract requests, donations and their stats, kept by the organisers. Sponsors never need an account. Switch the whole area off for an event that has none."
 [[features]]
-  icon = "fa-solid fa-ticket"
-  title = "Tickets"
-  body = "Attendee numbers from Pretix or a CSV import, so the stats page knows how many people are coming without the portal becoming a ticket shop."
+  icon = "fa-solid fa-user-check"
+  title = "Registrations"
+  body = "Who has registered, from Pretix or a CSV export of whatever sells your tickets or takes your RSVPs, so the stats know how many people are coming. Flashlights sells no tickets."
 [[features]]
   icon = "fa-solid fa-layer-group"
   title = "Editions"
@@ -78,11 +78,11 @@ title = "Home"
 [[features]]
   icon = "fa-solid fa-envelope"
   title = "The emails"
-  body = "Verification codes, sign-in codes, invitations, reminders and notices, each written once in Markdown and sent as text and HTML, through any SMTP provider."
+  body = "Invitations, reminders, notices and the rest of the portal's own emails, each written once in Markdown and sent as text and HTML, through any SMTP provider. Sign-in and verification codes come from the account system as plain text."
 [[features]]
   icon = "fa-solid fa-shield-halved"
-  title = "Nothing loads from anywhere else"
-  body = "Every script, stylesheet, font and chart is served by the instance itself. No analytics, no advertising, no third-party cookies."
+  title = "No third-party code on any page"
+  body = "Every script, stylesheet, font and chart is served by the instance itself. No analytics, no advertising, no third-party cookies. The only other host a page touches is your own bucket, for the pictures people upload."
 [[features]]
   icon = "fa-solid fa-book"
   title = "Documentation per release"
