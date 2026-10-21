@@ -2,7 +2,7 @@
    palette and the fonts; this file carries what the block cannot say:
    the primary button is Beam with Night ink, as in the core's design
    system, and the landing hero is the app's own: Night, the beam glow
-   and the ten lights. Accent-coloured text keeps the Beam ink shade. */
+   and the ten lights. */
 
 .g-btn--primary,
 .g-btn--primary:hover,
@@ -38,6 +38,6 @@
 .g-hero__media img { aspect-ratio: 3 / 2; object-fit: contain; }
 /* Stacked under the copy on a phone, the lights drop to a band, as in the app. */
 @media (max-width: 920px) {
-  .g-hero__media img { aspect-ratio: auto; height: 120px; }
+  .g-hero__media img { aspect-ratio: auto; height: 120px; object-fit: cover; }
 }
 
