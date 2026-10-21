@@ -33,6 +33,8 @@ The [features page](/docs/features/) goes through each area.
 - **Your public website.** Flashlights is the private side. A public program widget and API let your website show the schedule; the rest of the website is yours. [Popular](https://popular.mariatta.ca), a theme for community sites, is built by the same person and is the natural front of house.
 - **Video calls and chat.** The edition records where its community chat lives and whether talks are recorded; the calls and the chat happen on the platforms you already use.
 
+Some of this is for now. The about page says [where Flashlights is going](/about/#where-it-is-going).
+
 ## Where it comes from
 
 Flashlights is derived from the [PyLadiesCon portal](https://github.com/pyladies/pyladiescon-portal), which remains the portal built for PyLadiesCon, and keeps pulling improvements from it. The portal was built for one event's needs; Flashlights keeps its core and moves what differs between communities into configuration and each community's own code, instead of growing options for everyone. It is software to self-host, not a hosting service; the [about page](/about/#the-approach) explains the approach. It is free software under the GNU AGPL version 3, with a permission to run a modified copy for your own organisation's events. The [about page](/about/) has the details.
