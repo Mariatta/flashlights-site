@@ -8,7 +8,7 @@ lead = "Every release of Flashlights, newest first."
 
 Each release publishes the image `ghcr.io/mariatta/flashlights:X.Y.Z` (and `X.Y.Z-full`, `amd64` only, with the local transcription engine) and a [GitHub release](https://github.com/mariatta/flashlights/releases) with the entry below. Until 1.0, read every entry before upgrading; from 1.0, a change to the public API for community apps is marked **Breaking**. This page mirrors `CHANGELOG.md` in the repository.
 
-## 0.1.0 (unreleased)
+## 0.1.0 (2026-10-21)
 
 The first release of Flashlights, derived from the [PyLadiesCon portal](https://github.com/pyladies/pyladiescon-portal).
 
