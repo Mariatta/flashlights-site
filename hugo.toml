@@ -99,8 +99,8 @@ timeZone = "America/Vancouver"
   [params.footer]
     tagline = "Free software for the people who run events, under the GNU AGPL"
     [params.footer.credit]
-      label = "Made by Mariatta"
-      url   = "https://mariatta.ca"
+      label = "Popular. A Hugo theme by Mariatta."
+      url   = "https://popular.mariatta.ca/"
     [[params.footer.columns]]
       title = "Learn"
       [[params.footer.columns.links]]
