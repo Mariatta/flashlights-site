@@ -20,7 +20,7 @@ Each community runs its own instance, and each year's event, or each series of d
 
 ## Still being built
 
-Flashlights is in active development. A community needs more than speaker and sponsor management, and the rest comes step by step, as the communities that run it need it.
+Flashlights is in active development. A community needs more than speaker and sponsor management, and the rest of what it needs is all under development, landing step by step.
 
 ## The name
 
