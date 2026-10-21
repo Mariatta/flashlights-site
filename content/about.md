@@ -12,7 +12,7 @@ It was not designed in the abstract. It is derived from the [PyLadiesCon portal]
 
 Flashlights does not try to be the event platform that works for everything. It keeps the portal's core, turns its identity and its feature switches into configuration, and gives a community two hooks for the rest: a Django app of its own added to the image, and the right to replace a core template or static file. What one community needs and the core does not do lives in that community's repository, not as one more option in the core for everyone. The [Make it yours](/docs/adapt/) page is the practical side of this.
 
-The same line is drawn for running it. Flashlights is software to self-host, one instance per community, on any host that runs a container. Mariatta hosts the instances of the communities she organises and no others: Flashlights is not a hosting service and does not plan to become one. The licence says the same in its own words below: the additional permission is for an organisation's own events, and hosting Flashlights for others falls under the plain AGPL.
+The same line is drawn for running it. Flashlights is software to self-host, one instance per community, on any host that runs a container. Mariatta hosts the instances of the communities she organises; Flashlights itself is not a hosting service. The licence says the same in its own words below: the additional permission is for an organisation's own events, and hosting Flashlights for others falls under the plain AGPL.
 
 ## One instance per community
 

@@ -82,7 +82,7 @@ title = "Home"
 [[features]]
   icon = "fa-solid fa-shield-halved"
   title = "No third-party code on any page"
-  body = "Every script, stylesheet, font and chart is served by the instance itself. No analytics, no advertising, no third-party cookies. The only other host a page touches is your own bucket, for the pictures people upload."
+  body = "Every script, stylesheet, font and chart is served by the instance itself. No analytics, no advertising, no third-party cookies. The only other host a page touches is your own bucket, for the pictures and files people upload."
 [[features]]
   icon = "fa-solid fa-book"
   title = "Documentation per release"

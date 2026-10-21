@@ -18,7 +18,7 @@ Flashlights does not care which of these you are. One instance serves one commun
 
 ## What it runs
 
-- **Program**: proposals and their review, invitations, speaker profiles, sessions, checklists on both sides, the schedule, recordings and uploads, and a public program widget and API.
+- **Program**: proposals, approved or declined one by one, invitations, speaker profiles, sessions, checklists on both sides, the schedule, recordings and uploads, and a public program widget and API.
 - **People**: volunteer applications, teams, permissions granted through teams, and one account per person whose handles and pronouns flow into every form.
 - **Sponsors**: tiers, contract requests, donations and stats, kept by the organisers.
 - **Registrations**: who has registered, from Pretix or a CSV export, for the stats.
