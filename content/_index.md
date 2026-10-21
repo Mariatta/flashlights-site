@@ -56,9 +56,9 @@ title = "Home"
   title = "Sponsors"
   body = "Tiers, contract requests, donations and their stats, kept by the organisers. Sponsors never need an account. Switch the whole area off for an event that has none."
 [[features]]
-  icon = "fa-solid fa-user-check"
-  title = "Registrations"
-  body = "Who has registered, from Pretix or a CSV export of whatever sells your tickets or takes your RSVPs, so the stats know how many people are coming. Flashlights sells no tickets."
+  icon = "fa-solid fa-chart-column"
+  title = "The numbers"
+  body = "An organiser dashboard with volunteers, sponsorship and donations against their goals, and attendee counts read from Pretix or a CSV export of whatever takes your registrations. Public stats pages with a year-over-year comparison, off with one switch. Flashlights registers nobody; it keeps the records."
 [[features]]
   icon = "fa-solid fa-layer-group"
   title = "Editions"

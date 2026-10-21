@@ -27,10 +27,11 @@ lead = "A tour of what an instance does, area by area."
 - Sponsors never need an account; the organisers keep their record.
 - Switch the whole area off for an event that has none, and its pages are gone.
 
-## Registrations
+## The numbers
 
-- Who has registered, from a Pretix shop through its API or a CSV export of whatever sells your tickets or takes your RSVPs, so the stats know how many people are coming and, when the country is mapped, where from.
-- Flashlights sells no tickets and does not try to.
+- An organiser dashboard: onboarded volunteers, sponsorship and donations against their goals, attendee count, event tasks and what needs attention.
+- Stats pages for attendees (registered, first-timers, demographics when the fields are mapped), sponsorship and volunteers, a year-over-year comparison of registrations, proposals, sponsors and donors, and a JSON feed. Public by default, off with one switch.
+- Attendee records come from a Pretix shop through its API or a CSV export of whatever sells your tickets or takes your RSVPs. Flashlights registers nobody and sells no tickets; it keeps the records and counts them.
 
 ## Editions
 

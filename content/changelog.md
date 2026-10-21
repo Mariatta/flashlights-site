@@ -16,7 +16,7 @@ The first release of Flashlights, derived from the [PyLadiesCon portal](https://
 - **One instance per community, an edition per event.** Editions are one event a year or a series of dates, with venues and rooms, a format (in person, online or hybrid), recordings and community chat as settings, and the next edition planned while the current one runs.
 - **Permissions through teams.** Each team grants permissions from a catalogue, with presets such as Organizers, Program, Sponsorship and Proposal reviewers; the settings organisers need left the Django admin.
 - **Speakers.** Invitations, profiles, sessions, two-sided checklists with reminders, the schedule, video and file uploads, and a public program widget and API.
-- **Registrations** from Pretix or a CSV export.
+- **Attendee records** from Pretix or a CSV export, for the stats.
 - **Handles per person**: social links and pronouns belong to the account, and every form reads from them.
 - **Runs on any host.** The boot contract (`web`, `worker`, `release`) and the environment reference cover Heroku and compatibles, Azure, Cabotage and a plain server; switches turn off volunteering, sponsorship and the public stats.
 - **Community apps** add a Django app to the image with `EXTRA_APPS`, and may replace a core template or static file.

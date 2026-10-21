@@ -21,7 +21,7 @@ Flashlights does not care which of these you are. One instance serves one commun
 - **Program**: proposals, approved or declined one by one, invitations, speaker profiles, sessions, checklists on both sides, the schedule, recordings and uploads, and a public program widget and API.
 - **People**: volunteer applications, teams, permissions granted through teams, and one account per person whose handles and pronouns flow into every form.
 - **Sponsors**: tiers, contract requests, donations and stats, kept by the organisers.
-- **Registrations**: who has registered, from Pretix or a CSV export, for the stats.
+- **The numbers**: an organiser dashboard and stats pages, fed by the portal's own records and by attendee records read from Pretix or a CSV export.
 - **Emails**: the portal's own messages, written once in Markdown and delivered as text and HTML; sign-in and verification codes are plain text.
 
 The [features page](/docs/features/) goes through each area.
