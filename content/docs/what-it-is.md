@@ -10,6 +10,8 @@ Flashlights is the portal your organising team, your volunteers and your speaker
 
 ## Who it is for
 
+Open source communities, meetups and the smaller groups that run events: those that need more than spreadsheets and shared documents, and are not the large commercial organisations that can pay for an event management platform.
+
 - **A conference or summit** that takes session proposals, invites speakers, and has a schedule with rooms, sponsors and a volunteer team.
 - **A meetup or user group** with a series of nights through the year, a venue or two, speakers who need a checklist, and a small organising team.
 - **A chapter or department** of a larger organisation that runs its own events and wants its own instance under its own name.
