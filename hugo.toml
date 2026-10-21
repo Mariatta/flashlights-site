@@ -1,0 +1,132 @@
+baseURL = "https://flashlights.app/"
+enableRobotsTXT = true
+title = "Flashlights"
+theme = "popular"
+timeZone = "America/Vancouver"
+
+[taxonomies]
+  tag = "tags"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[[menu.main]]
+  name = "Docs"
+  url = "/docs/what-it-is/"
+  weight = 10
+[[menu.main]]
+  name = "Try it"
+  url = "/docs/try-it/"
+  weight = 20
+[[menu.main]]
+  name = "Deploy"
+  url = "/docs/deploy/"
+  weight = 30
+[[menu.main]]
+  name = "Changelog"
+  url = "/changelog/"
+  weight = 40
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 50
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 60
+[[menu.main]]
+  name = "About Flashlights"
+  parent = "About"
+  url = "/about/"
+  weight = 10
+[[menu.main]]
+  name = "Maintainers"
+  parent = "About"
+  url = "/organizers/"
+  weight = 20
+
+[params]
+  tagline = "Tiny Little Flashlights"
+  description = "Flashlights is the back-of-house platform for events, summits and meetups: the call for proposals, speakers and their files, volunteers and teams, sponsors, the schedule and the emails that hold it together. Free software, one instance per community."
+  brandName = "Flashlights"
+  brandSub = "back of house for events"
+  logo = "images/logo.svg"
+  favicon = "images/favicon.svg"
+  ogImage = "images/logo.svg"
+  customCSS = ["css/fonts.css", "css/flashlights.css"]
+
+  # The core's design system: Beam on Night and Paper, Bricolage Grotesque
+  # for display, Atkinson Hyperlegible Next for text. The theme has one
+  # primary colour for fills and for text, so the primary is Beam's ink
+  # shade (Beam 700), which reads on white; css/flashlights.css puts Beam
+  # itself, with Night ink, on the primary button. The fonts are served
+  # from static/fonts/ (css/fonts.css), copied from the core with their
+  # licences.
+  [params.brand]
+    primary       = "#7a5c00"
+    primaryHover  = "#6a5000"
+    primaryActive = "#5a4400"
+    secondary     = "#0f0f0d"
+    accent        = "#7a5c00"
+    ink           = "#0f0f0d"
+    surfaceWash   = "#fff0b3"
+    surfaceInk    = "#0f0f0d"
+    fontSans      = "'Atkinson Hyperlegible Next', Inter, system-ui, sans-serif"
+    fontDisplay   = "'Bricolage Grotesque', Inter, sans-serif"
+
+  [params.cta]
+    label = "Try it"
+    url   = "/docs/try-it/"
+    icon  = "fa-solid fa-lightbulb"
+
+  [[params.social]]
+    label = "GitHub"
+    icon  = "fa-brands fa-github"
+    url   = "https://github.com/mariatta/flashlights"
+  [[params.social]]
+    label = "RSS"
+    icon  = "fa-solid fa-rss"
+    url   = "/blog/index.xml"
+
+  [params.footer]
+    tagline = "Free software for the people who run events, under the GNU AGPL"
+    [params.footer.credit]
+      label = "Made by Mariatta"
+      url   = "https://mariatta.ca"
+    [[params.footer.columns]]
+      title = "Learn"
+      [[params.footer.columns.links]]
+        label = "What it is"
+        url = "/docs/what-it-is/"
+      [[params.footer.columns.links]]
+        label = "Features"
+        url = "/docs/features/"
+      [[params.footer.columns.links]]
+        label = "Try it"
+        url = "/docs/try-it/"
+    [[params.footer.columns]]
+      title = "Run it"
+      [[params.footer.columns.links]]
+        label = "Deploy"
+        url = "/docs/deploy/"
+      [[params.footer.columns.links]]
+        label = "Make it yours"
+        url = "/docs/adapt/"
+      [[params.footer.columns.links]]
+        label = "Core documentation"
+        url = "https://docs.flashlights.app/latest/"
+    [[params.footer.columns]]
+      title = "Project"
+      [[params.footer.columns.links]]
+        label = "Source on GitHub"
+        url = "https://github.com/mariatta/flashlights"
+      [[params.footer.columns.links]]
+        label = "Issues"
+        url = "https://github.com/mariatta/flashlights/issues"
+      [[params.footer.columns.links]]
+        label = "About and licence"
+        url = "/about/"
+
+# No events section on this site, so no calendar feed: pages, RSS and llms.txt.
+[outputs]
+  home = ["HTML", "RSS", "LLMS"]

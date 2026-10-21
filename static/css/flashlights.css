@@ -1,0 +1,18 @@
+/* Flashlights on top of Popular: the primary button is Beam with Night
+   ink, as in the core's design system, while accent-coloured text keeps
+   the Beam ink shade the brand block sets as the theme's primary. */
+.g-btn--primary {
+  background: #ffd43b;
+  border-color: #ffd43b;
+  color: #0f0f0d;
+}
+.g-btn--primary:hover {
+  background: #ffe27a;
+  border-color: #ffe27a;
+  color: #0f0f0d;
+}
+.g-btn--primary:active {
+  background: #f2bd00;
+  border-color: #f2bd00;
+  color: #0f0f0d;
+}
