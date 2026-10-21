@@ -51,6 +51,7 @@ timeZone = "America/Vancouver"
   brandName = "Flashlights"
   brandSub = "back of house for events"
   logo = "images/favicon.svg"
+  logoDark = "images/mark-night.svg"
   favicon = "images/favicon.svg"
   ogImage = "images/share.png"
   customCSS = ["css/fonts.css", "css/flashlights.css"]
