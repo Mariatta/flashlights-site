@@ -19,7 +19,7 @@
     radial-gradient(60% 80% at 50% 0%, rgba(255, 212, 59, 0.22), rgba(255, 212, 59, 0) 70%),
     #0f0f0d;
 }
-.g-hero h1 { color: #f7f5ef; letter-spacing: -0.02em; text-wrap: balance; }
+.g-hero h1 { color: #f7f5ef; letter-spacing: -0.025em; text-wrap: balance; }
 .g-hero__lead { color: #e2dfd5; }
 .g-hero .g-eyebrow { color: #ffd43b; }
 .g-hero .g-btn--outline { color: #f7f5ef; border-color: #c6c2b6; }
@@ -36,6 +36,8 @@
   overflow: visible;
 }
 .g-hero__media img { aspect-ratio: 3 / 2; object-fit: contain; }
+/* Stacked under the copy on a phone, the lights drop to a band, as in the app. */
+@media (max-width: 920px) {
+  .g-hero__media img { aspect-ratio: auto; height: 120px; }
+}
 
-/* Stat numbers on Paper use the accent's ink shade, never Beam itself. */
-.g-stat__n { color: #7a5c00; }
