@@ -24,7 +24,7 @@ Flashlights is in active development. A community needs more than speaker and sp
 
 ## The name
 
-The name is a nod to the Darren Hayes song; *Tiny Little Flashlights* is the full title. The accent colour is called Beam.
+The name comes from the Darren Hayes song *Tiny Little Flashlights*, from the album *Secret Codes and Battleships*. The accent colour is called Beam.
 
 ## Licence and contributions
 
