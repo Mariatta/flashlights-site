@@ -38,9 +38,14 @@ DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
 RELATIVE_LINK = re.compile(r"\]\((?!https?://|mailto:|#|/)([^)\s]+)\)")
 
 
-def fetch(url):
+def fetch(url, authorized=False):
+    """The body at ``url``; with ``GITHUB_TOKEN`` when ``authorized``.
+
+    Only GitHub's API wants the token, for its rate limit. The raw file host
+    does not take it, so a fetch from there stays anonymous.
+    """
     headers = {"User-Agent": "flashlights-site"}
-    if token := os.environ.get("GITHUB_TOKEN"):
+    if authorized and (token := os.environ.get("GITHUB_TOKEN")):
         headers["Authorization"] = f"Bearer {token}"
     request = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(request) as response:
@@ -49,7 +54,8 @@ def fetch(url):
 
 def latest_release():
     """The tag of the core's newest GitHub release."""
-    data = json.loads(fetch(f"https://api.github.com/repos/{REPO}/releases/latest"))
+    url = f"https://api.github.com/repos/{REPO}/releases/latest"
+    data = json.loads(fetch(url, authorized=True))
     return data["tag_name"]
 
 
