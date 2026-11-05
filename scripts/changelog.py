@@ -9,7 +9,9 @@ core's, taken from the newest GitHub release's tag so that a section dated
 but not yet tagged never appears here. A section headed ``(unreleased)`` is
 dropped. Links relative to the core repository are made absolute: a link
 into ``docs/`` goes to that version of the documentation site, any other
-to the file on GitHub at the release tag.
+to the file on GitHub at the release tag. GitHub's API is called with
+``GITHUB_TOKEN`` when the environment has one, as the workflow's does, which
+keeps a shared runner's unauthenticated rate limit out of the way.
 
     python scripts/changelog.py            # the newest release
     python scripts/changelog.py --ref v0.2.0
@@ -21,6 +23,7 @@ not the page changed. .github/workflows/changelog.yml runs it.
 
 import argparse
 import json
+import os
 import re
 import sys
 import urllib.request
@@ -31,11 +34,15 @@ PAGE = ROOT / "content" / "changelog.md"
 REPO = "mariatta/flashlights"
 DOCS = "https://docs.flashlights.app"
 HEADING = re.compile(r"^## (\S+) \((.+)\)\s*$", re.MULTILINE)
+DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
 RELATIVE_LINK = re.compile(r"\]\((?!https?://|mailto:|#|/)([^)\s]+)\)")
 
 
 def fetch(url):
-    request = urllib.request.Request(url, headers={"User-Agent": "flashlights-site"})
+    headers = {"User-Agent": "flashlights-site"}
+    if token := os.environ.get("GITHUB_TOKEN"):
+        headers["Authorization"] = f"Bearer {token}"
+    request = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(request) as response:
         return response.read().decode()
 
@@ -57,8 +64,9 @@ def absolute_links(section, version, ref):
         target = match.group(1)
         if target.startswith("docs/"):
             path, _, fragment = target[len("docs/") :].partition("#")
-            path = re.sub(r"\.md$", "", path)
-            path = "" if path == "index" else path.removesuffix("/index") + "/"
+            if path.endswith(".md"):
+                path = path.removesuffix(".md")
+                path = "" if path == "index" else path.removesuffix("/index") + "/"
             url = f"{DOCS}/{version}/{path}"
             return f"]({url}#{fragment})" if fragment else f"]({url})"
         return f"](https://github.com/{REPO}/blob/{ref}/{target})"
@@ -67,14 +75,21 @@ def absolute_links(section, version, ref):
 
 
 def released_sections(changelog, ref):
-    """The dated sections of the core's changelog, oldest last."""
+    """The dated sections of the core's changelog, oldest last.
+
+    A section is released when its heading carries a date, the test the
+    core's release script applies; ``(unreleased)`` and anything else fail.
+    """
     headings = list(HEADING.finditer(changelog))
     sections = []
     for index, heading in enumerate(headings):
         version, date = heading.groups()
-        if date == "unreleased":
+        if not DATE.fullmatch(date):
             continue
-        end = headings[index + 1].start() if index + 1 < len(headings) else len(changelog)
+        if index + 1 < len(headings):
+            end = headings[index + 1].start()
+        else:
+            end = len(changelog)
         section = changelog[heading.start() : end].strip()
         sections.append(absolute_links(section, version, ref))
     return sections
@@ -89,9 +104,14 @@ def render(page, sections):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--ref", help="the core's tag to mirror (default: the newest release)")
     parser.add_argument(
-        "--from", dest="source", type=Path, help="read this CHANGELOG.md instead of fetching it"
+        "--ref", help="the core's tag to mirror (default: the newest release)"
+    )
+    parser.add_argument(
+        "--from",
+        dest="source",
+        type=Path,
+        help="read this CHANGELOG.md instead of fetching it",
     )
     args = parser.parse_args(argv)
 
@@ -99,7 +119,10 @@ def main(argv=None):
     changelog = args.source.read_text() if args.source else core_changelog(ref)
     sections = released_sections(changelog, ref)
     if not sections:
-        print("changelog: the core's CHANGELOG.md has no released section", file=sys.stderr)
+        print(
+            "changelog: the core's CHANGELOG.md has no released section",
+            file=sys.stderr,
+        )
         return 1
     page = PAGE.read_text()
     rendered = render(page, sections)

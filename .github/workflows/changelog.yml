@@ -29,17 +29,23 @@ jobs:
           python-version: "3.14"
       - name: Copy the released sections from the core
         id: sync
-        run: echo "version=$(python scripts/changelog.py)" >> "$GITHUB_OUTPUT"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          version=$(python scripts/changelog.py)
+          echo "version=$version" >> "$GITHUB_OUTPUT"
       - name: Commit the page when it changed, and publish the site
         env:
           GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.sync.outputs.version }}
         run: |
           if git diff --quiet -- content/changelog.md; then
-            echo "The changelog already follows ${{ steps.sync.outputs.version }}."
+            echo "The changelog already follows $VERSION."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "The changelog mirror follows the core's ${{ steps.sync.outputs.version }}" -- content/changelog.md
+          git commit -m "The changelog mirror follows the core's $VERSION" -- content/changelog.md
+          git pull --rebase
           git push
           gh workflow run pages.yml --ref main
