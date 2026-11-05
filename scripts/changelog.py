@@ -42,7 +42,8 @@ def fetch(url, authorized=False):
     """The body at ``url``; with ``GITHUB_TOKEN`` when ``authorized``.
 
     Only GitHub's API wants the token, for its rate limit. The raw file host
-    does not take it, so a fetch from there stays anonymous.
+    answers 404 to a token it does not accept, so a fetch from there stays
+    anonymous.
     """
     headers = {"User-Agent": "flashlights-site"}
     if authorized and (token := os.environ.get("GITHUB_TOKEN")):
