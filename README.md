@@ -16,6 +16,11 @@ cd flashlights-site
 hugo server
 ```
 
+The changelog page mirrors the released sections of the core's `CHANGELOG.md`.
+`python scripts/changelog.py` copies them from the newest GitHub release;
+the Changelog workflow runs it daily and on demand, and commits the page when
+it changed.
+
 The theme is the `themes/popular` submodule, pinned to a release tag. Update
 it by checking out a newer tag there and committing the change.
 
