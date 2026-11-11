@@ -8,6 +8,120 @@ lead = "Every release of Flashlights, newest first."
 
 Each release publishes the image `ghcr.io/mariatta/flashlights:X.Y.Z` (and `X.Y.Z-full`, `amd64` only, with the local transcription engine) and a [GitHub release](https://github.com/mariatta/flashlights/releases) with the entry below. Until 1.0, read every entry before upgrading; from 1.0, a change to the public API for community apps is marked **Breaking**. This page mirrors `CHANGELOG.md` in the repository.
 
+## 0.5.0 (2026-11-11)
+
+- **Get started shows only what is open.** While volunteer applications
+  are closed, the Get started page shows only the Propose a session card,
+  at full width, with no question to answer. Before, the Volunteering card
+  stayed on the page with a line saying applications were closed. With the
+  speaker module on, an account that has neither proposed nor applied,
+  while the event takes neither proposals nor volunteer applications, gets
+  a short page saying so instead of the volunteer hub.
+- **The proposal receipt is a copy of the proposal.** The email sent
+  when a session is proposed used to name only the title and kind. It now
+  carries the session's details, starting with everyone presenting it
+  (the proposer first), what was written for the session and the
+  answers to public questions (each person's own, for questions about the
+  speaker), and goes to everyone on the proposal. A co-presenter's
+  copy says who proposed it, under the subject "We have a proposal with
+  you on it". Markdown is rendered in the HTML part and kept as typed in
+  the plain-text part. Editing a submitted proposal sends nothing.
+- **A proposal has a page of its own.** It shows what was sent (the
+  description and the proposer's own answers), the answer once there is
+  one, and the same edit, withdraw and send-again actions as My proposals.
+  The session title and the "See the proposal" button on My sessions, and
+  the title and button (formerly Checklist) on the speaker home, now open
+  it, and so does the title on My proposals. A co-presenter on someone
+  else's proposal is still sent to My proposals.
+- **A link back to the community's website.** Each event has a new
+  website field, for its page on the community's main website (for
+  example example.org/2026, then example.org/2027), set on the event's edit
+  page or in the admin. For the active event, a "<short name> website"
+  link appears in the navbar and the footer of every page, on the landing
+  page and in the sign-off of every email. Blank, no link appears.
+  Starting the next year shows the previous event's website on the form,
+  ready to change for the new event. A new migration adds the field.
+- **Affiliation rows fit their card.** On the speaker profile, proposal,
+  volunteer profile and account profile forms, the Remove checkbox and its
+  label spilled past the card border. They now sit in a column sized to
+  fit them, and the speaker profile form fills the content column instead
+  of two thirds of it.
+- **Code of Conduct and Terms of Service on every page.** The footer's
+  About group (Code of Conduct, Terms of Service, Documentation) showed only
+  on the signed-out landing page, so a signed-in person had no link to
+  either. Every page now has it. The Sponsorship group (prospectus, donate)
+  stays on the landing page.
+- **The username in the navbar reads on the dark bar.** The account menu
+  showed the signed-in username in black on the dark navbar. It now uses
+  the navbar's light link colour, like the other navbar links, and
+  brightens on hover.
+- **The account menu lines up with the other navbar links.** The avatar
+  and username in the top right of the navbar sat higher than the other
+  links. They are now centred on the bar like the rest. A long username
+  stays on one line, cut with an ellipsis, and screen readers announce the
+  account menu as a button rather than a link.
+- **Status badges are readable.** A speaker's "Confirmed" session showed
+  black text on dark grey. Four badge colours kept Bootstrap's text colour
+  on the portal's own backgrounds: confirmed, shared and the volunteer
+  application badges (dark on grey), published, approved and other green
+  badges (white on green, just short of readable), scheduled and the team
+  counts (white on the accent, unreadable on a light accent), and a sponsor
+  awaiting a response and the team's pending counts (white on orange). Each
+  now has a text colour that reads on its background. A confirmed
+  session's badge is light green, short of the solid green of a published
+  session, so it no longer looks like a draft. The shared media, volunteer
+  application and language badges, and an accepted or invoiced sponsor,
+  are outlined.
+- **"Propose another session" is a solid button.** On the speaker
+  dashboard and My sessions pages it was an outline button; on the
+  dashboard that made it easier to miss than the filled "Open my
+  checklist". It is now filled on both pages.
+- **A new verification code on request.** A person whose verification email
+  did not arrive saw only Confirm and Cancel on the code page; nothing said
+  that cancelling and signing in again sends a new code. The page now has
+  **Send me a new code**, twice per code page, with the newest code the
+  only one that works, and a line saying what else to try, which stays when
+  the button is gone. allauth sends one email per address every ten
+  seconds, so right after a code goes out the page says it was just sent
+  and counts down to when a new one can be asked for, with the button
+  disabled until then. A request that one of allauth's rate limits refuses
+  outright, such as a signup past its limit, or a new code asked for too
+  soon in a browser without JavaScript, now lands on a "Please wait a
+  moment" page in the instance's own styling instead of a bare "429 Too
+  Many Requests". The
+  [getting started guide](https://docs.flashlights.app/0.5.0/user/get_started/) says what to do when
+  the code does not arrive.
+- **Code pages and emails say how long the code works.** The email
+  verification and sign-in code pages said only that the code "expires
+  shortly", and the emails carrying the codes said nothing, so a person who
+  opened the email late had no hint why the code no longer worked. Both now
+  give the time, read from the setting allauth enforces: up to 15 minutes
+  for an email address and 3 minutes for a sign-in code. A new verification
+  code from the same page does not add time. Once a code has stopped
+  working, the verification email says what gets a fresh one: signing in
+  again after sign-up, or adding the address again on the Email addresses
+  page for an address added later. The password reset code page and email,
+  used only on an instance that turns on reset by code, also give the time.
+- **Code lifetimes are settings.** `EMAIL_VERIFICATION_CODE_MINUTES`
+  (default 15), `SIGN_IN_CODE_MINUTES` (default 3) and
+  `PASSWORD_RESET_CODE_MINUTES` (default 3) set how long each emailed code
+  works, so an instance can give people longer than allauth's defaults. A
+  value that is not a whole number of at least one stops the boot with the
+  variable's name. The code pages and emails quote whatever is set.
+- **django-allauth 65.21.1.** The accounts library moves from 65.13.0,
+  taking in its security fixes since, among them these. A rate limit with
+  two windows on one scope, such as the signup limit of 5 an hour and 20 a
+  day, no longer lets the longer window be bypassed; cancelling a sign-in
+  part way through now discards what it had collected, so the next sign-in
+  in the same browser starts clean; rate-limit updates are serialised under
+  concurrent requests; and codes typed by a person (email verification,
+  sign-in, password reset) are compared in constant time. Those codes are
+  now eight characters in two groups of four, such as `LZTL-KPGV`, and a
+  person may type them without the dash. On the change-password page the
+  "Forgot your password?" link moves under the current-password field, and
+  the Confirm access page now shows it too, as the sign-in page already did.
+  Nothing changes for a deployment.
+
 ## 0.4.1 (2026-11-06)
 
 - **A fresh database migrates again.** On 0.4.0, `migrate` on an empty
